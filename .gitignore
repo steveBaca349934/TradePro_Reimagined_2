@@ -1,1 +1,10 @@
-/tradepro_venv
+**/tradepro_2_venv/
+db.sqlite3
+*__pycache__*
+*.ipynb_checkpoints
+*.env
+*.kube/
+*.xlsx
+*.csv
+*node_modules
+/Users/stevebaca/PycharmProjects/TradePro_Reimagined_2/frontend/node_modules
