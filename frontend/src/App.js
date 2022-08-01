@@ -1,32 +1,27 @@
-import React from 'react';
-import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import Home from './containers/Home';
-import Login from './containers/Login';
-import Signup from './containers/Signup';
-import Activate from './containers/Activate';
-import ResetPassword from './containers/ResetPassword';
-import ResetPasswordConfirm from './containers/ResetPasswordConfirm';
-
-
-import Layout from './hocs/Layout';
-
-const App = () => (
-    <Router>
-        <Layout>
-
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route exact path='/login' element={Login} />
-                <Route exact path='/signup' element={Signup} />
-                <Route exact path='/reset_password' element={ResetPassword} />
-                <Route exact path='/password/reset/confirm/:uid/:token' element={ResetPasswordConfirm} />
-                <Route exact path='/activate/:uid/:token' element={Activate} />
-            </Routes>
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './containers/Home.js';
+import Login from './containers/Login.js';
+import Signup from './containers/Signup.js';
+import Activate from './containers/Activate.js';
+import ResetPassword from './containers/ResetPassword.js';
+import ResetPasswordConfirm from './containers/ResetPasswordConfirm.js';
 
 
-        </Layout>
-    </Router>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}> </Route>
+        <Route path="/login" element={<Login />}> </Route>
+          <Route path="/signup" element={<Signup />}> </Route>
+          <Route path="/reset-password" element={<ResetPassword />}> </Route>
+          <Route path="/activate/:uid/:token" element={<Activate />}> </Route>
+          <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}> </Route>
+          
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 export default App;

@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ResetPasswordConfirm = () =>(
+const ResetPasswordConfirm = () => (
+
     <div>
-        ResetPasswordConfirm
+
+        This is a test for the reset password confirm page
+     
     </div>
 );
 

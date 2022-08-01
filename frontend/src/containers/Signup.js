@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Signup = () =>(
+const Signup = () => (
+
     <div>
-        Signup
+
+        This is a test for the signup page
+     
     </div>
 );
 

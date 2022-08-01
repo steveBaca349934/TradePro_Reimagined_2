@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Activate = () =>(
+const Activate = () => (
+
     <div>
-        Activate
+
+        This is a test for the activate page
+     
     </div>
 );
 
