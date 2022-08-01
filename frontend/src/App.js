@@ -12,12 +12,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}> </Route>
-        <Route path="/login" element={<Login />}> </Route>
-          <Route path="/signup" element={<Signup />}> </Route>
-          <Route path="/reset-password" element={<ResetPassword />}> </Route>
-          <Route path="/activate/:uid/:token" element={<Activate />}> </Route>
-          <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}> </Route>
+        <Route path="/" element={<Home />}>
+        <Route path="/login" element={<Login />}/>
+          <Route path="/signup" element={<Signup />}/>
+          <Route path="/reset-password" element={<ResetPassword />}/>
+          <Route path="/activate/:uid/:token" element={<Activate />}/>
+          <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}/>
+          </Route>
           
       </Routes>
     </BrowserRouter>
