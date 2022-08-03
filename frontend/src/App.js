@@ -6,22 +6,25 @@ import Signup from './containers/Signup.js';
 import Activate from './containers/Activate.js';
 import ResetPassword from './containers/ResetPassword.js';
 import ResetPasswordConfirm from './containers/ResetPasswordConfirm.js';
-
+import { Provider } from 'react-redux';
+import store from './store';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-        <Route path="/login" element={<Login />}/>
-          <Route path="/signup" element={<Signup />}/>
-          <Route path="/reset-password" element={<ResetPassword />}/>
-          <Route path="/activate/:uid/:token" element={<Activate />}/>
-          <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}/>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/activate/:uid/:token" element={<Activate />} />
+            <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />} />
           </Route>
-          
-      </Routes>
-    </BrowserRouter>
+
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const Login = () => (
+const Login = () => {
     const [formData, setFormData] = useState({
     email: '',
     password: ''
